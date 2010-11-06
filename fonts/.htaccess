@@ -1,0 +1,11 @@
+FileETag MTime Size
+
+AddType application/vnd.ms-fontobject .eot
+
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	<FilesMatch "\.(gif|jpg|png|js|css|swf|ttf|eot|otf|svg|woff)$">
+		ExpiresDefault "access plus 10 years"
+	</filesMatch>
+</IfModule>
