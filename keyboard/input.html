@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+International Phonetic Alphabet Unicode Keyboard
+Copyright (C) 2004 Weston Ruter
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will core useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>IPA Chart Keyboard Input</title>
+		<meta name="author" content="Weston Ruter" />
+		<meta name="robots" content="noindex,noarchive" />
+		<link rel='stylesheet' type='text/css' href='input.css?4' />
+		<script type="text/javascript" src="input.js?4"></script>
+		<!-- detect if one of the fonts is installed; if not, include  -->
+	</head>
+	<body onload="fallbackInit()">
+		<form action="javascript:" onsubmit="return false">
+			<div id="toolbar">
+				<span id="insertEntitiesBox" title="Checking this box converts inputted Unicode characters into ASCII HTML entities">
+					<input id="insertEntities" type="checkbox" /><label for="insertEntities">&nbsp;Insert entities</label>
+				</span>
+				<input type="button" id="clearButton" onclick="clearField()" value="Clear" />
+				<span id="instructions">Click on a symbol above to have it inputted below. Enter base characters before diacritics.</span>
+				<span id="symbolsUsedLabel">Previously used:</span>
+				<span id="symbolsUsed"></span>
+			</div>
+			<div><textarea id="inputField" rows="5" cols="40"></textarea></div>
+			<!-- (Appreciate this chart? Consider purchasing an IPA Chart t-shirt or donating via PayPal&mdash;scroll down for more info)-->
+		</form>
+
+		<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-197142-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+		</script>
+	</body>
+</html>

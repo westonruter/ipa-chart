@@ -1,0 +1,564 @@
+/*
+ * International Phonetic Alphabet Chart in Unicode and XHTML/CSS
+ * Copyright (C) 2004-2006 Weston Ruter <http://linguiste.org/phonetics/ipa/chart/>
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will core useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
+
+
+/*div,table,td,th{
+	outline:red solid 1px;
+}*/
+
+a#keyboardLink {
+	position:fixed;
+	top:0px;
+	right:0px;
+	text-decoration:none;
+	padding:3px;
+	border:solid 1px black;
+	background-color:White;
+	color:Black;
+	z-index:200;
+}
+#loadFontBtn {
+	float:right;
+	font-size:9pt;
+}
+a#keyboardLink:hover {
+	color:Black;
+	background-color:Yellow;
+}
+
+#chartIntro {
+	display:none;
+}
+
+body {
+	font-family:"Charis SIL", "Doulos SIL", Gentium, "Arial Unicode MS","Lucida Sans Unicode", Arial, Serif;
+}
+
+
+h1#title {
+	text-align:center;
+	font-size:18pt;
+	margin-bottom:2px;
+}
+h1#title #updateDate 
+{
+	color:Red;
+}
+
+th {
+	font-weight:normal;
+	text-align:left;
+}
+
+h2 {
+	font-size:13pt;
+	margin-bottom:3px;
+}
+
+td  {
+	font-size:20pt;	
+}
+
+#alphabetRevision {
+	font-size:smaller;
+}
+
+span.ipa  {
+	font-size:20pt;
+}
+
+table  {
+	border-collapse:collapse;
+	padding:0px;
+	empty-cells:show;
+	border-spacing:0px;
+}
+
+/* Pulmonic Consonant Table *******************************/
+#pulmonicConsonants  {
+	margin-bottom:1em;
+}
+#pulmonicConsonants h2 {
+	margin-top:5px;
+}
+#pulmonicConsonants table{
+	width:100%;
+}
+#pulmonicConsonants table caption {
+	caption-side:bottom;
+}
+#pulmonicConsonants table, 
+#pulmonicConsonants td, 
+#pulmonicConsonants th {
+	border:solid 1px #777;
+	vertical-align:middle;
+}
+/* NOTE: only Gecko supports this, so not used
+#pulmonicConsonants table  {
+	caption-side:bottom;
+	border-style:solid;
+}
+*/
+/* replacement for caption */
+#pulmonicConsonants p {
+	margin-top:.25em;
+	text-align:center;
+}
+
+
+#pulmonicConsonants th {
+	font-size:8pt;
+	padding:2px;
+	text-align:center;
+}
+
+#pulmonicConsonants th.place {
+	width:8%;
+}
+#pulmonicConsonants th.manner {
+	text-align:left;
+	padding:0px 3px 0px 3px;
+	width:8%; /* for MSIE 6 */
+}
+#pulmonicConsonants td  {
+	font-size:20pt;
+	text-align:center;
+	padding:0px;
+}
+
+#pulmonicConsonants td .voiceless  {
+	float:left;
+	width:49.5%; /* Note: not 50% due to bug in MSIE 6 */
+	padding:0; /*2px 0px 2px 0px;*/
+}
+#pulmonicConsonants td .voiced  {
+	float:right;
+	width:49.5%; /* Note: not 50% due to bug in MSIE 6 */
+	padding:0; /*2px 0px 2px 0px;*/
+}
+
+#pulmonicConsonants .impossible  {
+	background-color:#AAAAAA;
+	color:Black;
+}
+#pulmonicConsonants span.impossible  {
+	border-left:solid 1px #777;
+	width:48%;
+}
+
+/* Non-Pulmonic Consonant Table ***************************/
+#nonPulmonicConsonants  {
+	clear:left;
+	float:left;
+	width:47%;
+	margin-bottom:2em;
+}
+
+div#nonPulmonicConsonants table {
+	border:solid 1px #777;
+	width:100%;
+}
+div#nonPulmonicConsonants table colgroup {
+	border-left:solid 1px #777;
+	border-right:solid 1px #777;
+}
+div#nonPulmonicConsonants thead th {
+	border-top:solid 1px #777;
+	border-bottom:solid 1px #777;
+}
+#nonPulmonicConsonants th {
+	padding:.4em;
+	border-right:solid 1px #777;  /* for MSIE 6 */
+}
+#nonPulmonicConsonants td {
+	padding:.4em;
+	border-left:solid 1px #777;  /* for MSIE 6 */
+}
+#nonPulmonicConsonants tbody td,
+#nonPulmonicConsonants tbody th  {
+	padding:1px .75ex 1px .75ex;
+}
+#nonPulmonicConsonants thead th {
+	font-size:11pt;
+	text-align:center;
+}
+
+#nonPulmonicConsonants tbody th {
+	text-align:left;
+	font-size:10pt;
+}
+#nonPulmonicConsonants tbody td {
+	font-size:20pt;
+	text-align:center;
+}
+
+/* Vowel Quadrilateral ************************************/
+#vowels  {
+	float:right;
+	width:45%;
+	margin-bottom:2em;
+}
+
+/*#closeVowels span,
+#close-midVowels span,
+#middleVowels span,
+#open-midVowels span,
+#openLaxVowels span,
+#openVowels span  {
+	padding-left:1ex;
+	padding-right:1ex;
+}
+
+#vowels embed  {
+	width:100%;
+	font-size:20pt;
+	height:9em;
+}*/
+
+div#vowelQuadrilateral  {
+	/*
+	background-image:url(vowelBackground.png);
+	background-position:right top;
+	background-repeat:no-repeat;
+	*/
+	position:relative;
+	font-size:1em;
+	width:100%;
+	height:310px;
+}
+div#vowelQuadrilateral span {
+	position:absolute;
+	z-index:100;
+}
+
+img#vowelBackground {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+div#vowelSymbols span {
+	font-size:20pt;
+	padding:0 5px;
+}
+div#vowelLabels {}
+
+#vowels p.caption {
+	margin-top:.25em;
+	margin-left:25%;
+}
+
+
+
+/* Other Symbols **************************************/
+div#otherSymbols  {
+	clear:left;
+	float:left;
+	width:60%;
+	margin-bottom:2em;
+}
+div#otherSymbols table{
+}
+div#otherSymbols table th {
+	text-align:left;
+	font-size:10pt;
+	width:50%; /* for MSIE 6 */
+}
+
+div#otherSymbols table td {
+	padding-left:1ex;
+	padding-right:1ex;
+	white-space:nowrap;
+}
+div#otherSymbols table td {
+	font-size:20pt;
+}
+div#otherSymbols table td.firstOfTwoExamples{
+	padding-right:0;
+}
+div#otherSymbols table td.secondOfTwoExamples{
+	padding-left:.25em
+}
+
+th#tiebar {
+	vertical-align:middle;
+}
+
+th#tiebar p {
+
+}
+th#tiebar span#tiebarExample { /* TO CHANGE */
+	float:right;
+	margin-top:.75em;
+	margin-left:1.5ex;
+}
+
+/* Suprasegmentals ****************************/
+div#suprasegmentals  {
+	float:right;
+	margin-bottom:2em;
+}
+
+div#suprasegmentals th  {
+	text-align:left;
+	font-weight:normal;
+	white-space:nowrap;
+	font-size:10pt;
+}
+div#suprasegmentals td {
+	white-space:pre;
+	font-size:20pt;
+	padding:0px .5ex 0px .5ex;
+}
+div#suprasegmentals td.symbol {
+	text-align:center;
+}
+div#suprasegmentals td.example {
+	text-align:left;
+}
+div#suprasegmentals td#stressExample  {
+	text-align:right;
+}
+
+
+/* diacritics *********************************/
+div#diacritics  {
+	width:70%;
+	clear:left;
+	float:left;
+	margin-bottom:1em;
+}
+div#diacritics table {
+	border:solid 1px #777;
+}
+div#diacritics table colgroup {
+	border-left:solid 1px #777;
+	border-right:solid 1px #777;
+}
+
+div#diacritics p  {
+	margin:3px;
+	text-align:left;
+}
+div#diacritics td, div#diacritics th {
+	border-top:solid 1px #777;
+	border-bottom:solid 1px #777;
+}
+div#diacritics td.rightExample { /* for MSIE 6 */
+	border-right:solid 1px #777;
+}
+div#diacritics td  {
+	padding:3px .5ex 3px .5ex;
+	text-align:center;
+	white-space:pre;
+	font-size:20pt;
+}
+div#diacritics td.leftExample {
+	padding-right:.2ex;
+}
+div#diacritics td.rightExample {
+	padding-left:.2ex;
+}
+
+div#diacritics th {
+	font-size:10pt;
+	padding:3px;
+}
+div#diacritics td.wideCell  {
+	text-align:left;
+	padding-left:.5ex;
+}
+
+div#diacritics th.wideCell  {
+	padding:2px 0px 2px .5ex;
+}
+
+/*
+div#diacritics td.wideCell {
+	border-right:none;
+	background-color:blue;
+}
+div#diacritics td.wideCell + th {
+	border-left:none;
+	background-color:Red;
+}*/
+
+/* Tones and Word Accents ********************************/
+
+
+div#tonesAndWordAccents  {
+	clear:right;
+	float:right;
+	margin-bottom:1em;
+}
+div#tonesAndWordAccents h2  {
+	text-align:center;
+	white-space:nowrap;
+}
+div#tonesAndWordAccents td, div#tonesAndWordAccents th  {
+	
+}
+
+div#tonesAndWordAccents td  {
+	font-size:20pt;
+	text-align:center;
+}
+
+div#tonesAndWordAccents thead th {
+	text-align:center;
+	font-weight:bold;
+	padding:3px;
+}
+div#tonesAndWordAccents tbody th {
+	padding:0px 2ex 0px 2ex;
+	text-align:left;
+	font-size:10pt;	
+}
+div#tonesAndWordAccents tbody th.or {
+	padding:0px 2px 0px 2px;
+	font-size:8pt;
+	vertical-align:middle;
+}
+
+/*
+div#tonesAndWordAccents tbody th#notSupported p {
+	padding:1ex;
+	border:dotted 1px #BBBBBB;
+	text-align:center;
+	background-color:#EEEEEE;
+	color:Black;
+	font-style:italic;	
+}
+
+
+#unsupportedContourToneDiacritics 
+{
+}
+*/
+
+/* footer *************************************/
+div#footer  {
+	font-family:"Arial Unicode MS", "Lucida Sans Unicode", Arial, Helvetica, Sans-Serif;
+	clear:both;
+}
+div#footer p {
+	margin-top:0;
+	margin-bottom:.5em;
+}
+
+a#shirtLink  {
+	float:left;
+	margin-right:8px;
+	margin-bottom:5px;
+}
+a#shirtLink img  {
+	border-color:Black;
+	border-width:1px;
+	height:125px;
+}
+a#shirtLink img#shirtFront  {
+	margin-right:5px;
+}
+#paypalLinkImage  {
+	margin-left:5px;
+	margin-right:5px;
+}
+#paypalLinkSpan
+{
+	color:Red;
+	background-color:White;
+	font-size:15pt;
+	margin-right:20px;
+	text-decoration:blink;
+}
+
+hr {
+	clear:both;
+}
+#copyright  {
+	clear:both;
+	font-size:9pt;
+	text-align:center;
+	margin-top:1em;
+}
+#footerBoilerplate  {
+	clear:both;
+}
+#buttonLinks  {
+	float:right; 
+	clear:both;
+}
+#buttonLinks img  {
+	height:31px;
+	width:88px;
+	border:none;
+}
+#buttonLinks img,
+#buttonLinks input 
+{
+	vertical-align:middle;
+}
+
+div#adsense {
+	text-align:center;
+	margin:5px 0 5px 0;
+	padding:5px;
+	clear:both;
+	background-color:#EEEEEE;
+	color:Black;
+}
+
+
+/*** Anniversary ******/
+
+#fifthAnniversaryLink {
+	position:fixed;
+	top:0px;
+	left:0px;
+	margin:0;
+	padding:3px;
+	border:solid 1px green;
+	text-decoration:none;
+	color:black;
+	background-color:lime;
+	font-size:10pt;
+}
+#fifthAnniversaryLink:hover {
+	background-color:yellow;
+	color:green;
+}
+
+#fifthAnniversary p {
+	display:none;
+	padding:0.5em;
+	border:solid 2px lime;
+	font-size:10pt;
+	max-width:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#fifthAnniversary p a {
+	color:green;
+}
+#fifthAnniversary p a:hover {
+	color:red;
+}
+#fifthAnniversary.target p { display:block; }
+#fifthAnniversary:target p { display:block; }
+#fifthAnniversary.target #fifthAnniversaryLink { display:none; }
+#fifthAnniversary:target #fifthAnniversaryLink { display:none; }

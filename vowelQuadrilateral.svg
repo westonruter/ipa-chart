@@ -1,0 +1,129 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" 
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 650 455" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title xml:lang="en">Vowel Quadrilateral</title>
+	<style type="text/css">
+	<![CDATA[
+		text {
+			font-family:"Doulos SIL",SILDoulosUnicodeIPA, "Arial Unicode MS", "Lucida Sans Unicode", Arial, Sans-serif;
+			
+			visibility:hidden;
+		}
+		text.vowel {
+			font-size:52px;
+			text-anchor:middle;
+		}
+		g#labels text {
+			font-size:25px;
+		}
+		g#labels text.height {
+			text-anchor:start;
+		}
+		g#labels text.backness {
+			text-anchor:middle;
+		}
+		
+		g#closeVowels text {
+			
+		}
+		g#connectingLines path {
+			stroke:black;
+			stroke-width:2px;
+		}
+	]]>
+	</style>
+	<script type="text/ecmascript">
+	<![CDATA[
+
+	]]>
+	</script>
+	
+	<g id="vowelQuadrilateral">
+	<!--<image xlink:href="template.png" x="0" y="0" width="650px" height="440px" />
+	<rect x="0" y="0" width="650px" height="450px" style="stroke:red; fill:none" />-->
+	
+	<g id="labels">
+		<text x="130px" y="24px" class="backness">Front</text>
+		<text x="356px" y="24px" class="backness">Central</text>
+		<text x="605px" y="24px" class="backness">Back</text>
+		
+		<text x="3px" y="75px" class="height">Close</text>
+		<text x="3px" y="190px" class="height">Close-mid</text>
+		<text x="3px" y="310px" class="height">Open-mid</text>
+		<text x="3px" y="430px" class="height">Open</text>
+	</g>
+	
+	<g id="closeVowels">
+		<text x="100px" y="80px" class="vowel">i</text>
+		<circle cx="128px" cy="68px" r="6px" />
+		<text x="175px" y="80px" class="vowel">y</text>
+		
+		<text x="337px" y="80px" class="vowel">ɨ</text>
+		<circle cx="366px" cy="68px" r="6px" />
+		<text x="402px" y="80px" class="vowel">ʉ</text>
+		
+		<text x="570px" y="80px" class="vowel">ɯ</text>
+		<circle cx="604px" cy="68px" r="6px" />
+		<text x="634px" y="80px" class="vowel">u</text>
+	</g>
+	<g id="closeLaxVowels">
+		<text x="218px" y="135px" class="vowel">ɪ</text>
+		<text x="255px" y="135px" class="vowel">ʏ</text>
+		
+		<text x="527px" y="135px" class="vowel">ʊ</text>
+	</g>
+	<g id="close-midVowels">
+		<text x="181px" y="197px" class="vowel">e</text>
+		<circle cx="207px" cy="185px" r="6px" />
+		<text x="246px" y="197px" class="vowel">ø</text>	
+			
+		<text x="380px" y="197px" class="vowel">ɘ</text>
+		<circle cx="405px" cy="185px" r="6px" />
+		<text x="435px" y="197px" class="vowel">ɵ</text>	
+			
+		<text x="570px" y="197px" class="vowel">ɤ</text>
+		<circle cx="604px" cy="185px" r="6px" />
+		<text x="634px" y="197px" class="vowel">o</text>
+	</g>
+	<g id="middleVowels">
+		<text x="427px" y="255px" class="vowel">ə</text>
+	</g>
+	<g id="open-midVowels">
+		<text x="257px" y="317px" class="vowel">ɛ</text>	
+		<circle cx="288px" cy="304px" r="6px" />
+		<text x="331px" y="317px" class="vowel">œ</text>	
+			
+		<text x="420px" y="317px" class="vowel">ɜ</text>
+		<circle cx="445px" cy="304px" r="6px" />
+		<text x="478px" y="317px" class="vowel">ɞ</text>	
+			
+		<text x="573px" y="317px" class="vowel">ʌ</text>
+		<circle cx="604px" cy="304px" r="6px" />
+		<text x="632px" y="317px" class="vowel">ɔ</text>
+	</g>
+	<g id="openLaxVowels">
+		<text x="302px" y="383px" class="vowel">æ</text>		
+		<text x="466px" y="375px" class="vowel">ɐ</text>
+	</g>
+	<g id="openVowels">
+		<text x="341px" y="435px" class="vowel">a</text>
+		<circle cx="370px" cy="426px" r="6px" />
+		<text x="405px" y="435px" class="vowel">ɶ</text>
+		
+		<text x="575px" y="435px" class="vowel">ɑ</text>
+		<circle cx="604px" cy="426px" r="6px" />
+		<text x="634px" y="435px" class="vowel">ɒ</text>
+	</g>
+	<g id="connectingLines">
+		<path d="M130,70 L370,425" /><!-- back column -->
+		<path d="M367,70 L417,221 M430,260 L457,339 M471,380 L488,425" /><!-- middle column -->
+		<path d="M604,70 L604,425" /><!-- front column -->
+		
+		<path d="M200,64  L310,64  M424,64  L538,64"  /><!-- close row -->
+		<path d="M266,184 L352,184 M456,184 L545,184" /><!-- close-mid row -->
+		<path d="M352,302 L398,302 M495,302 L550,302" /><!-- open-mid row -->
+		<path d="M430,425 L552,425" /><!-- open row -->
+	</g>
+	</g>
+</svg>

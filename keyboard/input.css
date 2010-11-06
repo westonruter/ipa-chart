@@ -1,0 +1,53 @@
+body, textarea {
+	font-family:"Charis SIL", "Doulos SIL", Gentium, "Arial Unicode MS","Lucida Sans Unicode", Arial, Serif;
+}
+body,form {
+	padding:0;
+	margin:0;
+}
+label {
+	cursor:pointer;
+}
+textarea#inputField 
+{
+	font-size:15pt;
+	width:100%;
+	border:0;
+}
+input#clearButton 
+{
+	vertical-align:text-bottom;
+}
+
+div#toolbar {
+	background-color:#DDD;
+	padding:3px;
+	border-bottom:solid 2px gray;
+	white-space:nowrap;
+}
+
+span#insertEntitiesBox {
+	background-color:#CCCCCC;
+	padding-right:3px;
+	border:solid 1px gray;
+	margin-right:3px;
+}
+span#symbolsUsed a 
+{
+	color:#000088;
+	padding-left:1ex;
+	padding-right:1ex;
+	text-decoration:none;
+}
+span#symbolsUsed a:hover 
+{
+	color:Red;
+	background-color:White;
+}
+span#instructions 
+{
+	font-style:italic;
+}
+span#symbolsUsed, span#symbolsUsedLabel{
+	display:none;
+}
