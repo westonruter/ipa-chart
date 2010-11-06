@@ -1,9 +1,9 @@
-View online: http://weston.ruter.net/projects/ipa-chart/view/
+[View online](http://weston.ruter.net/projects/ipa-chart/view/)
 
 Changelog
 =========
 
-Old changes can be viewed at: http://weston.ruter.net/projects/ipa-chart/#changelog
+See [old changelog](http://weston.ruter.net/projects/ipa-chart/#changelog) for previous changes.
 
 Todo List
 =========
