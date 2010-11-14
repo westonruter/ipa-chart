@@ -22,6 +22,7 @@ Todo List
    - the superscript equal sign to mark an unaspirated stop (eg. '40' = /'fɔr t⁼i/) (via James N.)
    - adding u025D ɝ
    - alternate voiceless diacritic for glyphs with descenders? e.g. U+030A (via Jason T.)
+   - It would be nice if it were possible to insert a small raised schwa offglide for short US English vowels like [ʊ], which tend to be diphthongal, and a small raised [ɑ] for the American English [ɔ], which tends to have such an offglide. (via Karen C.)
 5. Ability to change default font
 6. Isolate text-directionality into another file... ltr.css and rtl.css
 7. Make other stylesheets for other media and media queries (e.g. mobile devices)
