@@ -142,7 +142,8 @@ function disengageKey(){
 	}
 }
 
-function mouseoverSymbol(){
+function mouseoverSymbol() {
+    ipaIme.clearSuggestions();
 	this.style.backgroundColor = "#FFFF66";
 }
 function mouseoutSymbol(){
@@ -157,7 +158,7 @@ function fallbackInit(){
 	}
 }
 
-function init(){
+function init() {
 	//definitions
 	top.document.getElementById('inputFrame').onresize = resizeTextarea;
 	if(is_GECKO)
@@ -206,7 +207,9 @@ function init(){
 		document.getElementById('clearButton').addEventListener('mousedown', overrideAbandonment, false);
 		document.getElementById('insertEntities').addEventListener('mousedown', overrideAbandonment, false);
 	}
-	
+
+    ipaIme.init(textarea);
+
 	//add event handlers to capture the characters
 	var nodes, i;
 	function addHandlers(nodes, option){
@@ -218,7 +221,7 @@ function init(){
 					if(nodes.item(i).className.match(/\bimpossible\b/))
 						continue;
 					break;
-				case 'tonesAndWordAccents':
+				case 'tonesAndWordAccents': 
 					nodes.item(i).firstChild.data = nodes.item(i).firstChild.data.replace(/e/g, "\u25CC"); //U+2002 "EN SPACE" replaced with U+25CC "DOTTED CIRCLE"
 					break;
 				case 'diacritics':
@@ -229,7 +232,10 @@ function init(){
 						continue;
 			}
 			nodes.item(i).style.cursor = 'pointer';
-			if(document.addEventListener){
+
+			ipaIme.registerCharacter(nodes.item(i));
+
+            if (document.addEventListener) {
 				nodes.item(i).addEventListener('mousedown', engageKey, false);
 				nodes.item(i).addEventListener('mouseup', disengageKey, false);
 				nodes.item(i).addEventListener('mouseout', disengageKey, false);
@@ -270,8 +276,10 @@ function init(){
 	//all text embedded ipa
 	addHandlers(ipawin.document.getElementById('chart').getElementsByTagName('span'), 'ipa');
 
+	ipaIme.setEnabled(true);
 	resizeTextarea();
-	//textarea.select(); //focus
+
+    //textarea.select(); //focus
 	textarea.focus();
 }
 
@@ -284,6 +292,7 @@ function resizeTextarea(){
 	else if(document.body && document.body.clientHeight)
 		height = document.body.clientHeight;
 	height -= document.getElementById('toolbar').offsetHeight;
+	height -= document.getElementById('suggestions').offsetHeight;
 	textarea.style.height =  height + "px";
 }
 

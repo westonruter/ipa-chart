@@ -19,7 +19,7 @@ input#clearButton
 	vertical-align:text-bottom;
 }
 
-div#toolbar {
+div#toolbar,div#suggestions {
 	background-color:#DDD;
 	padding:3px;
 	border-bottom:solid 2px gray;

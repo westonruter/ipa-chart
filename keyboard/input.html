@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
 International Phonetic Alphabet Unicode Keyboard
@@ -26,6 +26,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 		<meta name="robots" content="noindex,noarchive" />
 		<link rel='stylesheet' type='text/css' href='input.css?4' />
 		<script type="text/javascript" src="input.js?4"></script>
+        <script type="text/javascript" src="ime.js?4"></script>
 		<!-- detect if one of the fonts is installed; if not, include  -->
 	</head>
 	<body onload="fallbackInit()">
@@ -37,9 +38,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 				<input type="button" id="clearButton" onclick="clearField()" value="Clear" />
 				<span id="instructions">Click on a symbol above to have it inputted below. Enter base characters before diacritics.</span>
 				<span id="symbolsUsedLabel">Previously used:</span>
-				<span id="symbolsUsed"></span>
+				<span id="symbolsUsed"></span>                
 			</div>
 			<div><textarea id="inputField" rows="5" cols="40"></textarea></div>
+            <div id="suggestions" style="visibility:hidden">&nbsp;</div>
 			<!-- (Appreciate this chart? Consider purchasing an IPA Chart t-shirt or donating via PayPal&mdash;scroll down for more info)-->
 		</form>
 
