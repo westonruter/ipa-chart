@@ -29,7 +29,19 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 		<!--[if lt IE 7]>
 		<style type="text/css">#fifthAnniversaryLink, #keyboardLink { position:absolute; } </style>
 		<![endif]-->
-		<script type="text/javascript" src="chart.js?5"></script>
+		<script src="chart.js"></script>
+		
+		<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-197142-7']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		}());
+		</script>
 	</head>
 	<body>
 		<div id="chart">
@@ -930,32 +942,6 @@ Update this chart to correspond to: http://upload.wikimedia.org/wikipedia/en/1/1
 			International Phonetic Alphabet and the IPA chart.
 			The code is copyright &copy; 2004-2009, <a target="_top" href="http://weston.ruter.net/">Weston Ruter</a>.</div>
 			</div>
-
-			<div id="adsense">
-				<script type="text/javascript">
-				google_ad_client = "pub-0540872133321296";
-				google_ad_width = 728;
-				google_ad_height = 90;
-				google_ad_format = "728x90_as";
-				google_ad_type = "text";
-				google_ad_channel ="";
-				google_page_url = document.location;
-				google_color_border = "336699";
-				google_color_bg = "FFFFFF";
-				google_color_link = "0000FF";
-				google_color_url = "008000";
-				google_color_text = "000000";
-				</script>
-				<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				</script>
-			</div>
 		</div>
-		
-		<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
-		<script type="text/javascript">
-		var pageTracker = _gat._getTracker("UA-197142-1");
-		pageTracker._initData();
-		pageTracker._trackPageview();
-		</script>
 	</body>
 </html>
