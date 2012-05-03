@@ -13,7 +13,7 @@
 Changelog
 =========
 
-See [old changelog](http://westonruter.github.com/ipa-chart/old-changelog.html) for previous changes.
+See [old changelog](http://westonruter.github.com/ipa-chart/changelog-old.html) for previous changes.
 
 Todo List
 =========
