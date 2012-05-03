@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">  
+  <title>IPA Chart Changelog (old)</title>
+<body>
+<h1><a href="https://github.com/westonruter/ipa-chart">IPA Chart</a> Changelog (old)</h1>
+
+
+<p>Here are listed changes that I have made to the IPA Chart. Most of
+the changes are the result of comments and feedback from users of the
+chart. I am very thankful for their help.</p>
+
+<h4>2008-06-12: Peter</h4>
+<p>Peter writes: “For the labiodental flap, your chart is using U+F25F, which is a private-use character.  According to Wikipedia, Unicode 5.1 defines U+2C71 for this.” Updated!</p>
+<h4>2007-10-22: Paul</h4>
+<p>Paul wrote in noticing that “[t]here are just a couple of clitches in the ‘Tone and Word Accents’ area. For example, the mid bar is linked to a lower bar in the pop-up. I think that the alt=”" values are off set by one value.” I have resolved this issue.</p>
+<h4>2006-03-13: Isaac C.</h4>
+<p>Per the suggestions of Kirk and another very insightful email from Isaac C. (see below), I have made the following changes:</p>
+<ul>
+<li><span style="text-decoration: line-through;">For the Pulmonic Consonant table, utilized the semantic </span><code style="text-decoration: line-through;">caption</code><span style="text-decoration: line-through;"> element instead of a generic paragraph.</span> <span style="font-style: italic;">Reverted for now.</span></li>
+<li>Added the new <a href="http://scripts.sil.org/CharisSILfont">Charis SIL</a> font as the preferred font; if it is not installed, the existing <a href="http://scripts.sil.org/DoulosSILfont">Doulos SIL</a> and new <a href="http://scripts.sil.org/Gentium">Gentium</a> are the next preferred fonts; I added a recommendation for these two new SIL fonts in the footer.</li>
+<li>Added the new IPA symbol, the labiodental flap: U+F25F “LATIN SMALL LETTER V WITH RIGHT HOOK” <a href="http://www.arts.gla.ac.uk/ipa/flap.htm">[1]</a></li>
+<li>Replaced the letter schwa with the rhotic hook diacritic with U+025A “LATIN SMALL LETTER SCHWA WITH HOOK”.</li>
+<li>Added contour tone letters.</li>
+<li>Added remaining contour tone diacritics, but they will remain commented out until Unicode 5.0.</li>
+<li>In keyboard mode, substituted level diacritics base character from U+2002 “EN SPACE” to U+25CC “DOTTED CIRCLE”</li>
+</ul>
+<p>Additional changes I have made:</p>
+<ul>
+<li>Changed the keyboard frameset from scrolling=yes to auto; this removes the disabled horizontal scrollbar in Firefox and Opera.</li>
+<li>Changed the symbol for the Velarized or pharyngealized diacritic from the simple tilde to the combining.</li>
+<li>For the over- and under-tiebars, I added generic examples of both with U+25CC DOTTED CIRCLE; clicking this in keyboard mode will insert the tie bar by itself.</li>
+<li>Added PayPal donate link to IPA Chart footer.</li>
+<li>The keyboard now works in Opera, version 9 (and perhaps lower).</li>
+</ul>
+<p>Issues remaining to be resolved:</p>
+<ul>
+<li>Tones and Word Accents: add more tone contour letters?</li>
+<li>There is too much whitespace.</li>
+</ul>
+<p>This round of changes was prompted by a very insightful email I received from Isaac C. on March 12th, 2006:</p>
+<blockquote class="gmail_quote" style="border-left: 1px solid #cccccc; margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><p>Thanks for the IPA keyboard. I must first say that you’ve done a great job getting this application up. I especially like the arrangement of the content–it looks just like the original IPA chart itself.  However, I found that the part about bottom ties not supported is untrue. If you look at the Unicode Standard 4.1, there is, at U+035C, a “COMBINING DOUBLE BREVE BELOW”, which essentially is the bottom tie bar you’re looking for. This is supported by Doulos SIL too. You might want to consider adding it in.  (Technical note: If you use Character Map, Doulos SIL will show the bottom tie bar under the Private Use Area (PUA)   at U+F176 and not U+035C. This is not a problem because within the font file both codes are mapped to the same glyph (dual-mapping).)  I read your changelog and apparently Kirk already told you that “Your comment that the contour tone diacritics and tone letters are not supported by Unicode is misleading.” Doulos SIL indeed does support it, and I’ve included the following Unicode values you can use to display the characters:</p>
+<ul>
+<li>Rising: U+02E9 U+02E5 (˩˥)</li>
+<li>Falling: U+02E5 U+02E9 (˥˩)</li>
+<li>High Rising: U+02E7 U+02E5 (˦˥)</li>
+<li>Low Rising: U+02E9 U+02E7 (˩˨)</li>
+<li>High Falling: U+02E5 U+02E7 (˥˦)</li>
+<li>Low Falling: U+02E7 U+02E9 (˨˩)</li>
+<li>Peaking: U+02E5 U+02E4 U+02E5 (˧˦˧)</li>
+<li>Dipping: U+02E5 U+02E6 U+02E5 (˧˨˧)</li>
+</ul>
+<p>There must not be any space between these tone characters or they will not display.  Though Doulos SIL supports the diacritics for contour-tones, it is Unicode 4.1 unofficial (the codes are in the PUA). It is going to be in Unicode 5.0:</p>
+<ul>
+<li>U+1DC4 COMBINING MACRON-ACUTE</li>
+<li>U+1DC5 COMBINING GRAVE-MACRON</li>
+<li>U+1DC6 COMBINING MACRON-GRAVE</li>
+<li>U+1DC7 COMBINING ACUTE-MACRON</li>
+<li>U+1DC8 COMBINING GRAVE-ACUTE-GRAVE</li>
+<li>U+1DC9 COMBINING ACUTE-GRAVE-ACUTE</li>
+</ul>
+<p>You might want to include these as a precursor to the upcoming new standard.  Speaking of diacritics, you might want to use Unicode standard U+25CC “DOTTED CIRCLE” as the placeholder for the them instead of U+2002 “EN SPACE”. This I feel will bring more brevity to where the diacritics be applied unto another character.  The rhotic schwa could be more accurately represented as U+025A “LATIN SMALL LETTER SCHWA WITH HOOK” rather than the letter schwa with the rhotic hook diacritic. I have some reservations on whether this is necessary because in the future such compound atomic characters might be obselete, as glyph mutation through different code sequences is already supported (quintessentially shown by the contour-tone case), just not so widely used. Perhaps fonts next time will automatically display this glyph when the schwa and rhotic hook are put together respectively? You might want to consider placing it on your keyboard anyway, since it is not done in Doulos SIL or Charis SIL.  Have you considered adding the ExtIPA characters into your keyboard? I thought this might be a useful extension of what you’ve done now. I believe most of the characters required for ExtIPA exist in the Unicode specification now.</p></blockquote>
+<p>Thank you Isaac!</p>
+<h4>2005-12-11: Kirk M.</h4>
+<p>Kirk sent me a few comments for the chart. The corrections he suggested and what I did with them appear below:</p>
+<p style="font-style: italic; font-weight: bold;">1. Could you replace the &lt;g&gt; with its IPA equivalent? There’s no need of your chart just for traditional &lt;g&gt;.</p>
+<p><span style="font-style: italic;">[In an email conversation with Kirk]</span> You are right, the IPA Handbook provides both on <a onclick="return top.js.OpenExtLink(window,event,this)" href="http://books.google.com/books?ie=UTF-8&amp;hl=en&amp;id=33BSkFV_8PEC&amp;pg=PA167&amp;lpg=PA167&amp;dq=110&amp;prev=http://books.google.com/books%3Fq%3Dipa%2Bhandbook&amp;sig=BVoDftjOxq9LBPOJFw3ohISw5WI" target="_blank"> page 179</a>. The ASCII &lt;<span>g</span><span>&gt; is referred to as “#210: Looptail G,” which Unicode classifies as “</span><span>U+0067: </span><span>LATIN SMALL LETTER G.” </span><span>The one shown on the IPA chart &lt;</span><span>ɡ</span><span>&gt; is referred to as</span><span>“#110: Opentail G,” which Unicode classifies as “U+0261: LATIN SMALL LETTER SCRIPT G.” Additionally, Unicode comments that this character U+0261 is a “voiced velar stop,” a comment which is not provided for U+0067. </span><span> As you have mentioned, both the IPA Handbook and the <a onclick="return top.js.OpenExtLink(window,event,this)" href="http://www.travelphrases.info/gallery/Test_IPA.html" target="_blank">IPA Unicode Test Page</a> state that these two characters are equivalent:</span></p>
+<blockquote class="gmail_quote" style="border-left: 1px solid #cccccc; margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><p><span> IPA #110 (above) and IPA #210 (left) are equivalent “Voiced velar plosive” symbols. </span> <span>IPA #110′s symbol name is “Opentail G” while #210′s is “Looptail G”.</span></p></blockquote>
+<p><span>Being that these two character are </span><span>equivalent, </span><span>which one is preferable? Opentail G would seem to be preferred as it is the one which appears on the IPA chart. However, the traditional Looptail G is obviously supported by more fonts being that it has the benefit of being within the ASCII range. </span> The <a onclick="return top.js.OpenExtLink(window,event,this)" href="http://www.blugs.com/IPA/" target="_blank">IPA Palette</a> decided it was necessary to replace “regular ‘latin small letter g’ (U+0067) with ‘latin small letter script g’ (U+0261).” You also give a good reason for this replacement in that “it would be nice to be able to get the other one using” the chart. I will go ahead and replace U+0067 with U+0261.</p>
+<p style="font-style: italic; font-weight: bold;">2. Your comment that the contour tone diacritics and tone letters are not supported by Unicode is misleading. They need to be rendered in the IPA font, just as most other sequences of diacritics. Doulos SIL has now made a start on this.</p>
+<p><span style="color: #ff0000;">See above.</span></p>
+<p style="font-style: italic; font-weight: bold;">3. (Minor point.) Upstep and downstep are not supported by Unicode. What you have are ingressive and egressive airflow, used by the ExtIPA. Hopefully superscript arrows will be supported soon.</p>
+<p><span style="color: #ff0000;"> [action pending...]</span></p>
+<p>Thank you Kirk!</p>
+<h4>2005-07-28: Sylvester</h4>
+<p>Added diacritics for rising (U+030C: Combining Caron) and falling (U+0302: Combining Circumflex Accent) tones; thanks to Sylvester.</p>
+<h4>2005-01-24: Mark D.</h4>
+<p>Corrected spelling of “plumonic” to “pulmonic”. Many thanks to Mark D. for bringing this to my attention.</p>
+
+</body>
+</html>
