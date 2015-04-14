@@ -45,12 +45,12 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 			this chart, use the <a href="keyboard/" target="_top">IPA Unicode “Keyboard”</a>,
 			which is built off of this document.</span>
 		</p>
-		<p>If you are a screen reader user, you may want to use <a href="./accessiblechart.html"> a more accessible version of the chart</a> </p>
+		
+		<p><a href="./index.html">Go back to the original chart</a></p>
 		
 		<!--[if !IE]><!-->
 		<button id="loadFontBtn" type="button" onclick="loadFontStylesheet(); return false;" title="If don't have a font installed that can display all of the symbols in the IPA, click this button to load and immediately apply a font that does. Please be patient... it takes a moment to download.">Missing some symbols? Apply Doulos SIL font</button>
 		<!--<![endif]-->
-		
 		
 		<div id="pulmonicConsonants">
 		<h2>Consonants (Pulmonic)</h2>
@@ -374,69 +374,122 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 		<div id="vowelQuadrilateral">
 			<img id="vowelBackground" src="vowelBackground.png" alt="Vowel Quadrilateral" />
 			<!--<embed src="vowelQuadrilateral.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />-->
-			<div id="vowelLabels">
-				<span style="right:76%; top:0">Front</span>
-				<span style="right:40.5%; top:0">Central</span>
-				<span style="right:3.5%; top:0">Back</span>
-				
-				<span style="left:0; top:11.2087912087912%">Close</span>
-				<span style="left:0; top:36.4835164835165%">Close-mid</span>
-				<span style="left:0; top:62.8571428571429%">Open-mid</span>
-				<span style="left:0; top:89.2307692307692%">Open</span>
+
+		<table>
+			<thead>
+			<tr>
+				<td></td>
+				<th>Front </th>
+				<th>Near-front</th>
+				<th>central</th>
+				<th>Near-back</th>
+				<th>Back</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<th>Close</th>
+				<td>
+					<span title="LATIN SMALL LETTER I">i</span>
+					<span title="U+0079: LATIN SMALL LETTER Y">y</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+0268: LATIN SMALL LETTER I WITH STROKE">ɨ</span>
+					<span title="U+0289: LATIN SMALL LETTER U BAR">ʉ</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+026F: LATIN SMALL LETTER TURNED M">ɯ</span>
+					<span title="U+0075: LATIN SMALL LETTER U">u</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Near-close</th>
+				<td></td>
+				<td>
+					<span title="U+026A: LATIN LETTER SMALL CAPITAL I">ɪ</span>
+					<span title="U+028F: LATIN LETTER SMALL CAPITAL Y">ʏ</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+028A: LATIN SMALL LETTER UPSILON">ʊ</span>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th> close-mid </th>
+				<td>
+					<span title="U+0065: LATIN SMALL LETTER E">e</span>
+					<span title="U+00F8: LATIN SMALL LETTER O WITH STROKE">ø</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+0258: LATIN SMALL LETTER REVERSED E">ɘ</span>
+					<span title="U+0275: LATIN SMALL LETTER BARRED O">ɵ</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+0264: LATIN SMALL LETTER RAMS HORN">ɤ</span>
+					<span title="U+006F: LATIN SMALL LETTER O">o</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Mid</th>
+				<td></td>
+				<td></td>
+				<td>
+					<span title="U+0259: LATIN SMALL LETTER SCHWA">ə</span>
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Open-mid</th>
+				<td>
+					<span title="U+025B: LATIN SMALL LETTER OPEN E">ɛ</span>
+					<span title="U+0153: LATIN SMALL LIGATURE OE">œ</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+025C: LATIN SMALL LETTER REVERSED OPEN E">ɜ</span>
+					<span title="U+025E: LATIN SMALL LETTER CLOSED REVERSED OPEN E">ɞ</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+028C: LATIN SMALL LETTER TURNED V">ʌ</span>
+					<span title="U+0254: LATIN SMALL LETTER OPEN O">ɔ</span>
+				</td>
+			</tr>
+			<tr>
+				<th> near-open</th>
+				<td>
+					<span title="U+00E6: LATIN SMALL LETTER AE">æ</span>
+				</td>
+				<td></td>
+				<td>
+					<span title="U+0250: LATIN SMALL LETTER TURNED A">ɐ</span>
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th> Open</th>
+				<td>
+					<span title="U+0061: LATIN SMALL LETTER A">a</span>
+					<span title="U+0276: LATIN LETTER SMALL CAPITAL OE">ɶ</span>
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<span title="U+0251: LATIN SMALL LETTER ALPHA">ɑ</span>
+					<span title="U+0252: LATIN SMALL LETTER TURNED ALPHA">ɒ</span>
+				</td>
+			</tr>
+			</tbody>
+</table>
 			</div>
-			<div id="vowelSymbols">
-				<div id="closeVowels">
-					<span title="U+0069: LATIN SMALL LETTER I" style="right:82.31%; top:6.81%;">i</span>
-					<span title="U+0079: LATIN SMALL LETTER Y" style="right:70.77%; top:6.81%">y</span>
-					
-					<span title="U+0268: LATIN SMALL LETTER I WITH STROKE" style="right:45.85%; top:6.81%">ɨ</span>
-					<span title="U+0289: LATIN SMALL LETTER U BAR" style="right:35.85%; top:6.81%">ʉ</span>
-					
-					<span title="U+026F: LATIN SMALL LETTER TURNED M" style="right:10.00%; top:6.81%">ɯ</span>
-					<span title="U+0075: LATIN SMALL LETTER U" style="right:0.15%; top:6.81%">u</span>
-				</div>
-				<div id="closeLaxVowels">
-					<span title="U+026A: LATIN LETTER SMALL CAPITAL I" style="right:64.15%; top:18.90%">ɪ</span>
-					<span title="U+028F: LATIN LETTER SMALL CAPITAL Y" style="right:58.46%; top:18.90%">ʏ</span>
-					
-					<span title="U+028A: LATIN SMALL LETTER UPSILON" style="right:16.62%; top:18.90%">ʊ</span>
-				</div>
-				<div id="close-midVowels">
-					<span title="U+0065: LATIN SMALL LETTER E" style="right:69.85%; top:32.53%">e</span>
-					<span title="U+00F8: LATIN SMALL LETTER O WITH STROKE" style="right:59.85%; top:32.53%">ø</span>	
-						
-					<span title="U+0258: LATIN SMALL LETTER REVERSED E" style="right:39.23%; top:32.53%">ɘ</span>
-					<span title="U+0275: LATIN SMALL LETTER BARRED O" style="right:30.77%; top:32.53%">ɵ</span>	
-						
-					<span title="U+0264: LATIN SMALL LETTER RAMS HORN" style="right:10.00%; top:32.53%">ɤ</span>
-					<span title="U+006F: LATIN SMALL LETTER O" style="right:0.15%; top:32.53%">o</span>
-				</div>
-				<div id="middleVowels">
-					<span title="U+0259: LATIN SMALL LETTER SCHWA" style="right:32.00%; top:45.27%">ə</span>
-				</div>
-				<div id="open-midVowels">
-					<span title="U+025B: LATIN SMALL LETTER OPEN E" style="right:58.15%; top:58.90%">ɛ</span>	
-					<span title="U+0153: LATIN SMALL LIGATURE OE" style="right:46.77%; top:58.90%">œ</span>	
-						
-					<span title="U+025C: LATIN SMALL LETTER REVERSED OPEN E" style="right:33.08%; top:58.90%">ɜ</span>
-					<span title="U+025E: LATIN SMALL LETTER CLOSED REVERSED OPEN E" style="right:24.15%; top:58.90%">ɞ</span>	
-						
-					<span title="U+028C: LATIN SMALL LETTER TURNED V" style="right:9.54%; top:58.90%">ʌ</span>
-					<span title="U+0254: LATIN SMALL LETTER OPEN O" style="right:0.46%; top:58.90%">ɔ</span>
-				</div>
-				<div id="openLaxVowels">
-					<span title="U+00E6: LATIN SMALL LETTER AE" style="right:51.23%; top:73.41%">æ</span>		
-					<span title="U+0250: LATIN SMALL LETTER TURNED A" style="right:26.00%; top:71.65%">ɐ</span>
-				</div>
-				<div id="openVowels">
-					<span title="U+0061: LATIN SMALL LETTER A" style="right:45.23%; top:84.84%">a</span>
-					<span title="U+0276: LATIN LETTER SMALL CAPITAL OE" style="right:35.38%; top:84.84%">ɶ</span>
-					
-					<span title="U+0251: LATIN SMALL LETTER ALPHA" style="right:9.23%; top:84.84%">ɑ</span>
-					<span title="U+0252: LATIN SMALL LETTER TURNED ALPHA" style="right:0.15%; top:84.84%">ɒ</span>
-				</div>
-			</div>
-		</div>
 		<p class='caption'>Where symbols appear in pairs, the one to the right represents a rounded vowel.</p>
 		</div>
 		
