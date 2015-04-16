@@ -142,12 +142,12 @@ table  {
 	padding:0px;
 }
 
-#pulmonicConsonants td .voiceless  {
+#pulmonicConsonants td .voiceless, #vowels td.unrounded{
 	float:left;
 	width:49.5%; /* Note: not 50% due to bug in MSIE 6 */
 	padding:0; /*2px 0px 2px 0px;*/
 }
-#pulmonicConsonants td .voiced  {
+#pulmonicConsonants td .voiced,  #vowels td.rounded{
 	float:right;
 	width:49.5%; /* Note: not 50% due to bug in MSIE 6 */
 	padding:0; /*2px 0px 2px 0px;*/
