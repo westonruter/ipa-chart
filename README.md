@@ -50,3 +50,6 @@ Old Issues (may no longer be valid)
  - Lucida Sans Unicode chops lower diacritics in half.
  - SILDoulosUnicodeIPA does not support the nasal release diacritic.
  - The embed element is not defined by the W3C, but it is the only tag that Internet Explorer and Mozilla recognize.
+
+<hr>
+<p>Developed by <a href="https://plus.google.com/113853198722136596993" rel="author">Weston Ruter</a> (<a href="https://twitter.com/westonruter">@westonruter</a>).</p>
