@@ -152,7 +152,7 @@ function mouseoutSymbol(){
 function fallbackInit(){
 	//move to top iframe
 	if(self == window.top){
-		window.location.href = "/phonetics/ipa/chart/keyboard/";
+		window.location.href = "./";
 		return false;
 	}
 }
