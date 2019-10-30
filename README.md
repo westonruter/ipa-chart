@@ -52,4 +52,4 @@ Old Issues (may no longer be valid)
  - The embed element is not defined by the W3C, but it is the only tag that Internet Explorer and Mozilla recognize.
 
 <hr>
-<p>Developed by <a href="https://plus.google.com/113853198722136596993" rel="author">Weston Ruter</a> (<a href="https://twitter.com/westonruter">@westonruter</a>).</p>
+<p>Developed by <a href="https://weston.ruter.net/" rel="author">Weston Ruter</a> (<a href="https://twitter.com/westonruter">@westonruter</a>).</p>
