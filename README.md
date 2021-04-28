@@ -1,7 +1,7 @@
 <h1>International Phonetic Alphabet (<abbr title="International Phonetic Alphabet">IPA</abbr>)</h1>
 <p>in Unicode and XHTML/CSS</p>
 
-<p><a title="View the chart" href="http://westonruter.github.com/ipa-chart/"><img src="http://westonruter.github.com/ipa-chart/screenshot.png" width="320" alt="Screenshot of the IPA Chart"></a></p>
+<p><a title="View the chart" href="http://westonruter.github.com/ipa-chart/"><img src="screenshot.png" width="320" alt="Screenshot of the IPA Chart"></a></p>
 
 <p><em>(This is an old project that I moved from my site over to be fully hosted by GitHub, so I haven't updated the writeup below of much of the code in many years.)</em></p>
 
